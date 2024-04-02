@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DOM</title>
+	</head>
+	<body>
+		<div id="box">
+			<div class="miniBox"></div>
+			<div class="miniBox"></div>
+		</div>
+		<form action="" method="get" name="myform">
+			<input type="text" name="user" value="666"/>
+		</form>
+		<script>
+			//获取元素的方式
+			//通过 id 获取元素
+			let box = document.getElementById('box');
+			//通过标签名获取 html 集合 HTMLCollection 类似数组的对象
+			let div = document.getElementsByTagName('div')[0];
+			//通过 name 属性进行获取节点列表 NodeList 类似数组的对象
+			let user = document.getElementsByName('user')[0];
+			//通过类名获取 html 集合
+			let minibox = document.getElementsByClassName('miniBox')[0];
+			
+			//通过查询选择器
+			let qs = document.querySelector('.miniBox');  //查询匹配的一个元素
+			let qsa = document.querySelectorAll('.miniBox'); //返回 NodeList
+			console.log(qsa);
+			
+			//通过表单名
+			console.log(document.myform);
+			//表单名 -> 控件名
+			console.log(document.myform.user)
+			//通过控件获取属性
+			console.log(document.myform.user.value);
+			document.myform.user.value = '888';
+			
+			//修改文本
+			qs.innerHTML = '<h1>长子</h1>';  //修改 Html 内容
+			console.log(qs.innerHTML);
+			qs.innerText = '<h1>长子</h1>';  //修改元素的文本  容易 XSS 黑客攻击
+			
+			//修改样式
+			qs.style.color = 'green';
+			//修改属性
+			qs.setAttribute('class','red');
+			console.log(qs.getAttribute('class'));
+			//
+			console.log(qs.className);  //类名字符串
+			console.log(qs.classList);  //类名列表 类似数组的对象
+			qs.classList.add('red');  //添加类名
+			
+			//元素的属性
+			console.log(box.firstChild);  //第一个子元素（包含回车、空格）
+			console.log(box.lastChild);  //最后一个子元素
+			console.log(box.nextSibling);  //同级元素的后一个节点
+			console.log(box.attributes);  //所有属性
+			console.log(qs.parentNode);  //返回父节点
+			
+			//创建元素
+			// 父容器.appendChild（子元素）  insertBefore
+			newNode.appendChild(text);
+			document.querySelector('#box').insertBefore(newNode,qs);
+			
+			//移除元素
+			// removeChild
+			box.removeChild(newNode);
+			
+			//替换
+			// replaceChild(new,old);
+			box.replaceChild(newNode,qs);
+			
+			// cloneNode 复制节点
+			
+			//创建元素
+			let newNode = document.createElement('h1');  //创建元素
+			let text = document.createTextNode('文本');  //创建文本
+			
+			
+			
+		</script>
+	</body>
+</html>
