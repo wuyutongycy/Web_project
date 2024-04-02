@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>字符串</title>
+	</head>
+	<body>
+		<script>
+			let str = "hello";
+			console.log(str.charAt(1));  //通过下标获取字符 == str[1]
+			
+			var str = "hello world!";
+			console.log(str.split('h'));  //切割 将字符串分割为数组（新）
+			//参数为切割点，没有参数将字符串转为数组，参数是空字符就每个字符都进行切割
+			//切割点切割点出现 n 次，数组长度 n+1
+			console.log(str);
+			
+			let str = "abcdefg";
+			// str.slice(起始小标[,结束下标])  //切片（字符串提取）
+			console.log(str.slice(1));  //从（包含）起始下标至字符串末
+			console.log(str.slice(1,3));  //不包含结束小标
+			console.log(str.slice(-8,10));  //负数表示从末尾倒数，最后一个字符是 -1
+			
+			
+		</script>
+	</body>
+</html>

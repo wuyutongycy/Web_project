@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>对象</title>
+	</head>
+	<body>
+		<script>
+			// let obj ={
+			// 	name:'张三',
+			// 	age:18
+			// };  //键值对组成，键：对象的属性（几乎都是字符串） 值是属性值（任意数据类型）
+			
+			/*let obj = new Object({mame:'张三'});
+			obj.name = '吴';
+			obj.sex = '女';  //对属性进行赋值
+			
+			for(let key in obj){
+				console.log(obj[key]);
+			}
+			
+			console.log(obj.name);
+			console.log(obj.age);
+			*/
+			
+			//ES6
+			/*let s = Symbol();
+			obj[s] = '李四';
+			obj[Symbol()] = '王五';
+			console.log(obj[s]);
+			
+			let sex = '男';
+			let obj = {
+				name = '张三',
+				sex,  //键和值名称相同，可以简写
+				age:18,
+				*/
+				//当值是函数时，键作为函数名
+				/*run:function(){
+					console.log('run');
+				}*/
+				/*run(){
+					console.log('run');
+				}
+			}
+			obj.run();
+			*/
+			
+			//对象合并
+			let obj1 = {
+				name:'张三'
+			}
+			let obj2 = {
+				age:18,
+				sex:'男'
+			}
+			console.log({...obj1,...obj2});
+			for(let key in obj2){
+				obj1[key] = obj2[key];
+			}
+			Object.assign(obj1,obj2);  //将 obj2 复制到 obj1 里面
+		console.log(obj1);
+		console.log(obj2);
+		console.log(Object.keys(obj2));
+		</script>
+	</body>
+</html>
