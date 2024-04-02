@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>循环语句</title>
+	</head>
+	<body>
+		<script>
+		// for 循环
+		/*for(变量声明;条件表达式;步长)
+		{
+			代码块
+		}*/
+		/*for(let i = 0;i<10;i++)
+		{
+			console.log(i);
+		}*/
+		
+		//ES6
+		// let list = ['张三','李四'];  //数组
+		// let obj = {name:'张三',age:18};  //对象（键值对）
+		// for(let i in obj){
+		// 	//i 是下标
+		// 	console.log('in',i)
+		// }
+		// //不能遍历对象
+		// for(let i of obj){
+		// 	//i 是元素
+		// 	console.log('in',i);
+		// }
+		
+		//  函数 function
+		/*命名函数  匿名函数
+		function 函数名（[参数1···]{
+			函数体
+		}
+		*/
+	   // function fun(){
+		  //  console.log('fun');
+	   // }
+	   // fun();  // 函数调用
+	   // //匿名函数 多用于回调函数
+	   // let fun = function(){
+		  //  console.log('fun0');
+	   // }
+	   // fun();
+	   
+	   //箭头函数
+	   let fun = () =>{
+		   console.log('fun')
+	   }
+	   fun();
+	   /*setTimeout( () =>{
+		   console.log('1秒之后');
+	   },1000)  //异步
+	   */
+	  setInterval( () =>{
+	  		   console.log('1秒之后');
+	  },1000)
+	   console.log('666');
+		</script>
+	</body>
+</html>

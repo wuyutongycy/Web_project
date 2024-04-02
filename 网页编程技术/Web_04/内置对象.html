@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>内置对象</title>
+	</head>
+	<body>
+		<div id='time'>计时器</div>
+		<script>
+			// let time = new Date(2005,12,12);
+			// console.log(time.toLocaleString());  //转为本地日期
+			
+			// //console.log(time.getYear())
+			// console.log(time.getFillYear());  //返回年份
+			// console.log(time.getMonth()+1);  //返回月份下标
+			// console.log(time.getDate());  // 某月的某天
+			// console.log(time.getDay());  //0~6 星期日：0  星期六：6
+			
+			// console.log(time.getHours());  //0~23 返回小时数
+			// console.log(time.getMinutes());  //分钟
+			// console.log(time.getSeconds());//秒钟
+			
+			// console.log(time.getTime());  //时间戳
+			
+			
+			// let num = 0;
+			// let inv =setInterval( () =>{
+			// 	num++;
+			// 	let time = document.getElementById('time')
+			// 	time.innerText = num
+			// },1000);
+			
+			// console.log(Math.pow(2,2));
+			
+			// //字符串
+			// let str = "";
+			// let str = new String('123456');
+			
+			// //字符串拼接
+			// let str = 'ab' + 'c';
+			// let str = 18 + 18 + 'abc';//字符串 + 数字 = 字符串
+			// let str = 'ab';
+			// console.log(str.concat('cdef'));  //返回一个新的（拼接后）的字符串（不改变原数据）
+			
+			//ES6 字符串模板
+			let num =20;
+			let str = `年龄 ：${num + 5} 岁`;
+			console.log(str);
+		</script>
+	</body>
+</html>

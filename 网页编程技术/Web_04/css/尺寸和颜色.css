@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.box{
+	font-size: 32px;
+	/* width: 4em; */
+	width: 200vw;
+	height:200vh;
+	/* 单位
+	 像素 px  cm 厘米
+	 em（当前元素字体的大小）倍数  rem（跟元素的字体大小）倍数
+	 root
+	 浏览器默认像素：16px
+	 vw(1/100 视窗宽度)
+	 %(父容器的大小)比例
+	 */
+}
+
+/* 颜色 */
+h1{
+	/* color: white; */
+	/* color: #0F10; */
+	color: rgba(1, 1, 255,0.5); /* a 取值 0~1  值越大，越不透明 */
+	/* opacity: 0.5; */ 
+	/* text-shadow: ; */
+}

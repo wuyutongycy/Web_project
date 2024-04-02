@@ -1,0 +1,33 @@
+/* 普通盒子（内容盒子） */
+/* box-sizing:content-box */
+.box{
+	/* 宽度 */
+	width: 100px;
+	/* 高度 */
+	height: 100px;
+	/* 内补白 */
+	padding: 10px;
+	/* 外补白 */
+	margin: 10px 20px 5px;
+	/* 一个参数  上下左右 方向 
+		2个参数  上下 左右
+		3个参数  上 左右 下
+		4个参数  上 右 下 左
+	*/
+   /* margin-top: ;
+   margin-right: ;
+   margin-bottom: ;
+   margin-left: ; */
+   
+   /* 边框 */
+   border: 5px solid #f00;
+   box-sizing: border-box;
+   overflow: hidden;
+   /* 容器大小 = 内容+内边距+边框
+		占用大小 = 容器大小+外边框
+		复合属性：将多个属性值当作一个属性值
+	*/
+   /* 怪异盒子（边框盒子）
+		box-sizing:boder-box
+	*/
+}

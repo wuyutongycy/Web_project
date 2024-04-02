@@ -1,0 +1,45 @@
+/* 弹性盒子（弹性布局） flex 布局 */
+/* 父容器设置弹性盒子，让子容器富有弹性 */
+.box{
+	/* 显示形式： block 块  inner 行内（无宽高）  none 隐藏
+		inner-block 行内块（有宽高） flex 弹性盒子
+	*/
+	/* display: block;*/
+	display: flex;
+	/* 布局结构：row 行 column 列
+		row-reverse 行反转 column-reverse 列反转
+	 */
+	flex-direction: row;
+	/* 换行方式：nowrap 不换行  wrap 换行 */
+	flex-wrap: wrap;
+	/* 布局方式
+	 flex-start 起始位置
+	 flex-end 结束位置
+	 center 居中
+	 space-between 两端对齐（两端无间隙）
+	 space-around 分散对齐（两端有间隙）
+	 space-evenly 分散对齐（两端有间隙）
+	 */
+	justify-content: space-around;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+	
+}
+.innerBox{
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+}
+.red{
+	background-color: #f00;
+}
+.green{
+	background-color: #0f0;
+}
+.blue{
+	background-color: #00f;
+}
+.pink{
+	background-color:pink;
+}

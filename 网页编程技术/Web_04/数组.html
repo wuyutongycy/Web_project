@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组</title>
+	</head>
+	<body>
+		<script>
+		// Array 数组
+		//数组的元素可以是任意数据类型
+		/*
+		let list1 = [1,2,3];
+		let list2 = new Array(5,3);  //一个参数（数字）就创建长度为 5 的（空）数组
+		console.log(list2);
+		console.log(list[0]);  //通过下标获取元素
+		*/
+		
+		let a = [1,2,3];
+		let b = [4,5,6];
+		//合并
+		console.log(a.concat(b));
+		for(let i in b){
+			a.push(b[i]);  //追加元素
+		}
+		
+		//查询首次满足条件元素的下标
+		let arr = [8,9,14,2,6];
+		let ind = arr.findIndex((item) => {
+			console.log(item);
+			return item < 8;
+		});
+		console.log(ind);
+		
+		let arr = [8,9,14,2,6];
+		console.log(arr.includes(2));  //是否包含
+		console.log(arr.indexOf(9,3));  //查询元素下标（第二个参数是从什么位置开始查询）
+		
+		//join 连接成字符串，没有参数默认值 连接
+		console.log(arr.join("+"));  //参数作为连接符
+		
+		//sort 默认将元素转为字符串进行排序
+		console.log(arr);
+		let res = arr.sort((a,b) => {
+			console.log('a',a);  //后一项
+			console.log('b',b);  //前一项
+			return b - a;
+		});
+		console.log(res);  //a - b 升序    b - a 降序
+		
+		let arr = [1,3,5,7,9];
+		//arr.splice(起始下标[,删除数量[,添加的内容 ···]])
+		//移除元素
+		console.log(arr.splice(1));  //移除从起始下标至数组结束的元素，并返回
+		console.log(arr.splice(-4,2));  //参数二是移除的数量
+		//添加元素
+		console.log(arr.splice(1,0,2,3,4));  //在起始位置前面添加元素（1个或多个）
+		console.log(arr);  //改变原数组
+		
+		let arr = [1,3,5,7,9];
+		console.log(arr.pop());  //移除数组最后一项，并返回
+		console.log(arr.push(9));  //返回追加之后的长度
+		console.log(arr.shift());  //移除数组第一项，并返回
+		
+		</script>
+	</body>
+</html>

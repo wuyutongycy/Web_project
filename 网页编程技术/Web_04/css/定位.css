@@ -1,0 +1,41 @@
+/* 定位 position */
+/* 静态 static  无定位 默认
+	相对 relative  相当于当前位置进行偏移（保留位置/不会脱离文本流）
+	绝对  absolute
+	/* 绝对定位 absolute 是相当于离自己最近的具有定位的父元素偏移 */
+	/*
+	固定 fixed  固定在窗口某个位置（脱离文本流）
+	沾性
+ */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* 相反方向在一个定位元素是只用一个 */
+.outerBox{
+	width: 200px;
+	height: 200px;
+	background-color: #f00;
+	/* position: relative;*/
+	position: fixed;
+	/* left: calc(50%-100px);  /* 计算函数 */
+	/* top: calc(50%-100px); */
+	/* left: 10px;
+	top: 10px; */
+	
+	/* transform: translate(-100px,-100px); */
+	
+	right: 10px;
+	bottom: 10px;
+	}
+	
+	.innerBox{
+		width: 200px;
+		height: 200px;
+		background-color: yellow;
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+	}
